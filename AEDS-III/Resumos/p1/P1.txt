@@ -1,0 +1,83 @@
+- Arquivos sequenciais  
+	|_ Vários registros simultaneamente  
+	|	|_ Não necessariamente a um específico, pode ser vários  
+	|	|_ Existe um critério que define a ordem deles  
+	|	|	|_ Chama-se: chave de ordenação  
+	|	|		|_ Normalmente determinada a partir de um ou mais campos  
+	|	|_ Vai ter que existir alguma forma de chegar no arquivo que você quer, já que não seria eficaz fazer uma varredura completa  
+	|  
+	|_ Cada registro tem que ter sua forma de identificação (ID)  
+	|	|_ *Tipos de ID*  
+	|	|	|_ Primária  
+	|	|	|	|_ Definida de forma exclusiva  
+	|	|	|	|	|_ Não depende fixamente da ordem numérica, e sim da forma que foram ordenados  
+	|	|	|	|	|_ São chaves IMUTÁVEIS, já que serão usadas sempre  
+	|	|	|	|	|_ Não recomendados:  
+	|	|	|	|	|_ Nome  
+	|	|	|	|	|_ Email  
+	|	|	|	|	|_ Telefone  
+	|	|	|	|	|_ CPF  
+	|	|	|	|_ Pode não ter ordem  
+	|	|	|	|_ Acesso em ordem que eles foram gravados no setor do disco  
+	|  
+	|_ Não necessariamente o cliente de ID 001 tem alguma relação com o cliente de ID 002 e assim por diante  
+	|_ Características  
+	|	|_ Numérico  
+	|	|	|_ Melhor aproveitamento dos bytes  
+	|	|_ Sequenciais  
+	|	|	|_ Evita o desperdício de valores numéricos  
+	|	|		|_ 1 byte -> 256 bits, ou seja, muito espaço para pouca utilidade  
+	|	|_ Exclusivos  
+	|	|	|_ Não podem ser ambíguos  
+	|_ Não significativos  
+	|	|_ Não podem ser alterados  
+	|_ Não reusáveis  
+	|	|_ Sem reaproveitamentos para outras coisas  
+	|  
+	|_ São melhores quando não temos que ordenar novamente os arquivos, de forma que eles entram e apenas são desligados assim, eles não geram problemas gerais  
+	
+- Ordenação externa  
+	|_ Sorts  
+	|	|_ Dependendo do método escolhido, eles vão ser "pivot", já que pedem uma capacidade maior do que a recomendada do arquivo  
+	|	|  
+	|	|_ Quanto menor o número de leituras, melhor para as operações de ordenação  
+	|	|_ Como é efetuada a organização dos sorts em arquivo  
+	|		|_ Primeiro, pegamos uma quantidade e colocamos em memória primária, ordenamos e criamos um arquivo temporário  
+	|		|_ Segundo, repetimos o mesmo processo até que a leitura esteja realizada corretamente  
+	|		|_ Terceiro, pegamos seções dos arquivos temporários, seja lá qual for a quantidade (M) de arquivos temporários existentes  
+	|		|_ Quarto, fazemos isso até chegar ao final de cada arquivo, criando outros M arquivos temporários  
+	|		|_ Quinto, repetimos o processo até que sobre apenas um arquivo, que será depositado na memória secundária novamente, já ordenado  
+	|  
+	|_ Intercalação balanceada  
+	|	|_ M -> Caminhos  
+	|	|_ Algoritmo de intercalação de arquivos temporários  
+	|	|	|_ Inserção de número em arquivos temporários  
+	|	|	|	|_ Arquivo_temporário_1: B1 B4 B7 B10 ...  
+	|	|	|	|_ Arquivo_temporário_2: B2 B5 B8 B11 ...  
+	|	|	|	|_ Arquivo_temporário_3: B3 B6 B9 B12 ...  
+	|	|	|_ Gera novos segmentos para balancear, gerando novos segmentos que vão ser reordenados  
+	|	|	|	|_ Arquivo_temporário_4: S1 S4 S7 S10 ...  
+	|	|	|	|_ Arquivo_temporário_5: S2 S5 S8 S11 ...  
+	|	|	|	|_ Arquivo_temporário_6: S3 S6 S9 S12 ...  
+	|	|	|		|_ Sabemos que S é um segmento, assim, S1 é composto pela interação dos blocos B1, B2 e B3, e assim por diante  
+	|	|	|	|_ O processo se repete até termos os segmentos todos ordenados  
+	|  
+	|_ Segmentos de tamanho variável  
+	|	|_ Quanto maiores os segmentos, menos intercalações são necessárias  
+	|	|_ O tamanho dos segmentos é limitado pela capacidade de ordenação em memória principal  
+	|	|_ Segmentos de tamanho variável podem ser usados quando já estão ordenados entre si  
+	|	|	|_ Exemplo:  
+	|	|		|_ Arquivo_temporário_1: (B1 + B4) B7 B10 ...  
+	|	|		|_ Arquivo_temporário_2: B2 B5 B8 B11 ...  
+	|	|		|_ Arquivo_temporário_3: B3 B6 B9 B12 ...  
+	|	|_ Podemos usar uma estrutura de dados como uma fila de prioridades (heap de mínimo) para gerar segmentos maiores de forma planejada  
+	|	|	|_ Um heap de mínimo permite gerar segmentos de tamanho maior que N, mesmo com uma estrutura de tamanho N  
+	|	|	|_ Isso é feito usando uma fila de prioridades para organizar os segmentos  
+	|	|_ Exercícios de intercalação balanceada com variações estão disponíveis para prática  
+	|  
+	|_ Conclusão  
+	|	|_ O algoritmo de intercalações balanceadas de M caminhos foi estudado com detalhes  
+	|	|_ Outros algoritmos de ordenação externa existem e há maneiras de melhorar a ordenação no próprio algoritmo estudado  
+	|	|_ O que foi visto é suficiente para os objetivos da disciplina
+
+- Arquivos indexados

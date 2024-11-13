@@ -1,0 +1,24 @@
+lista de aeds3
+
+1) sim, ja que dependendo do tamanho das informacoes que voce vai guardar, ele pode ocupar menos ou mais de uma secao do HD, ou seja, se ele for muito grande e ocupar mais de um espaco, vc ter que ler mais secoes do que so uma
+
+2) a leitura sequencial e mais rapida pelo fato de que as informacoes em sequencia vao demander menos trabalho do cabecote, ou seja, ele apenas vai rodar e assim, nao tera que deslocar no cilindro.
+
+3) depende, eles tem suas variedades, rodando e 0 a 4, assim, dependedo do caracter ue voce usar, ele vai utilizar mais byts para armazenar
+
+4) 
+	a) 4 + 20
+	b) 4 + 31
+	c) 4 + 23
+
+5)
+	a) quando o arquivo for menor do que o esperado, ele ira alterar o tamanho no local onde ele esta, nos bytes alocados , e se sobrar uma quantidade de bytes, o ideal seria preencher com lixo, ou criar um vetor de bytes inicializado com 0
+	b) se o arquivo for maio, voce pega as informacoes e coloca para o final do arquivo, e depois, atravez do ID, voce redireciona para onde quer que eles fiquem, e o espaco vasio, voce coloca lixo ou o vetor de bytes inicializados om 0
+
+8) sim, dependendo do local do arquivo, se ele for maio do que os espacos ja alocados, eles vao acabar sendo redirecionados  naquele local fica um indice indireto 
+
+9) velocidade na busca e flexibilidade da consulta 
+   complexidade de manutencao e espaco de armazenamento
+
+10) int create ( Filme filme ) {
+    

@@ -1,0 +1,7 @@
+Imagine que você está em uma livraria enorme, com milhões de livros, e quer encontrar um específico. Se você tivesse que olhar livro por livro, levaria muito tempo, certo? Agora, imagine que os livros estão organizados em estantes, e cada estante tem uma lista com os títulos dos livros que ela contém. Em vez de procurar livro por livro, você olha na lista da estante e, se o livro que você quer estiver ali, você já o encontra de cara. Se não estiver, você segue para a próxima estante, mas agora com muito mais certeza de onde procurar.
+
+A ideia de organizar essas estantes de uma forma esperta é o que uma árvore B faz. Em vez de comparar cada item individualmente, ela agrupa um monte deles em "blocos" (como estantes) e, com uma ou poucas consultas, você já sabe em qual bloco procurar. Assim, a cada vez que você verifica um "bloco", você elimina uma grande parte da busca.
+
+Esse tipo de organização reduz o número de vezes que você precisa acessar a "livraria" inteira (a memória secundária, no caso do computador), porque você está pegando grandes porções de informações de uma vez só. E, dentro de cada bloco, como já está tudo na memória, você consegue buscar rápido.
+
+Então, uma árvore B é como se você tivesse estantes bem organizadas com várias listas de livros, e essa organização faz com que você encontre o que precisa muito mais rápido do que se tivesse que vasculhar toda a loja.
