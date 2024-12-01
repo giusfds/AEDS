@@ -4,7 +4,14 @@
 
 ### O que vai aprender na disciplina:
 - ordenação em memoria secundaria, vai tratar tudo como se fosse um arquivo
-(a completar ainda, ja que nao passei nessa materia ainda)
+- arvore B e B+ (arvore B+ é a mais usada em banco de dados)
+- hash extensivel
+- listas invertidas
+- compressão de dados baseado em estatica
+- compressão de dados baseada em dicionario
+- cripto de dados
+- casamento de padrões
+- otimização de casamento de padrões
 
 ### TP
 - os tps estao em outro repositorio, onde tem todos os 4 tps distribuidos por branchs diferentes
@@ -13,14 +20,28 @@
 
 ### Notas
 
-| **Item**                       | **Nota** |
-|--------------------------------|----------|
-| **Exercícios de fixação 01**   | 1.00     |
-| **Exercícios de fixação 02**   | 0.75     |
-| **Exercícios de fixação 03**   | 1.00     |
-| **Exercícios de fixação 04**   | 1.00     |
-| **Exercícios de fixação 05**   | 0.75     |
-| **Exercícios de fixação 06**   | 0.25     |
-| **Exercícios de fixação 07**   | 1.00     |
-| **Nota final**                 | 5,75     |
-|**Total de Pontos**             | 100      |
+| **Item**                                | **Nota**  |
+|-----------------------------------------|-----------|
+| **Exercícios de fixação 01**            | 1.00      |
+| **Exercícios de fixação 02**            | 0.75      |
+| **Exercícios de fixação 03**            | 1.00      |
+| **Exercícios de fixação 04**            | 1.00      |
+| **Exercícios de fixação 05**            | 0.75      |
+| **Exercícios de fixação 06**            | 0.25      |
+| **Exercícios de fixação 07**            | 1.00      |
+| **Exercícios de fixação 08**            | 1.00      |
+| **Exercícios de fixação 09**            | 0.75      |
+| **Exercícios de fixação 10**            | 1.00      |
+| **Exercícios de fixação 11**            | 1.00      |
+| **Exercícios de fixação 12**            | -----     |
+| **Exercícios de fixação 13**            | -----     |
+| **TP1 - CRUD**                          | 5.00      |
+| **TP2 - Relacionamento 1:N**            | 4.25      |
+| **TP3 - Buscas e Relacionamento N:N**   | -----     |
+| **TP4 - Backup compactado**             | -----     |
+| **Primeira prova**                      | 13.00     |
+| **Segunda prova**                       | 11.00     |
+| **TP4 - Backup compactado**             | -----     |
+| **ADA**                                 | -----     |
+| **Nota final**                          | 42,75     |
+|**Total de Pontos**                      | 100       |
