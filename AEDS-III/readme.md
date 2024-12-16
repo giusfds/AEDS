@@ -33,15 +33,15 @@
 | **Exercícios de fixação 09**            | 0.75      |
 | **Exercícios de fixação 10**            | 1.00      |
 | **Exercícios de fixação 11**            | 1.00      |
-| **Exercícios de fixação 12**            | -----     |
-| **Exercícios de fixação 13**            | -----     |
+| **Exercícios de fixação 12**            | 1.00      |
+| **Exercícios de fixação 13**            | 0.75      |
 | **TP1 - CRUD**                          | 5.00      |
 | **TP2 - Relacionamento 1:N**            | 4.25      |
-| **TP3 - Buscas e Relacionamento N:N**   | -----     |
-| **TP4 - Backup compactado**             | -----     |
+| **TP3 - Buscas e Relacionamento N:N**   | 3.75      |
+| **TP4 - Backup compactado**             | 5.00      |
 | **Primeira prova**                      | 13.00     |
 | **Segunda prova**                       | 11.00     |
-| **TP4 - Backup compactado**             | -----     |
-| **ADA**                                 | -----     |
-| **Nota final**                          | 42,75     |
+| **Terceira prova**                      | 14.50     |
+| **ADA**                                 | 2.60      |
+| **Nota final**                          | 73.00     |
 |**Total de Pontos**                      | 100       |
